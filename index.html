@@ -397,6 +397,315 @@
 
     footer span { color: var(--coral); }
 
+    /* ── BIG ISLAND ── */
+    .big-island { background: #0d0d0d; color: #fff; padding: 0; }
+
+    .bi-hero {
+      height: 70vh;
+      min-height: 480px;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.65) 100%),
+        url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 4rem 6rem;
+    }
+
+    .bi-hero-kicker {
+      display: inline-block;
+      background: #e76f51;
+      color: #fff;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+      width: fit-content;
+    }
+
+    .bi-hero h2 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .bi-hero p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      max-width: 620px;
+      line-height: 1.8;
+    }
+
+    /* overview strip */
+    .bi-overview {
+      background: #111;
+      padding: 4rem 2rem;
+    }
+
+    .bi-overview-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .bi-stat-item h3 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--sand);
+      margin-bottom: 0.4rem;
+    }
+
+    .bi-stat-item p {
+      font-size: 0.85rem;
+      opacity: 0.65;
+      letter-spacing: 1px;
+    }
+
+    /* intro text */
+    .bi-intro {
+      background: #0d0d0d;
+      padding: 6rem 2rem;
+    }
+
+    .bi-intro-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .bi-intro-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .bi-intro-text .section-label { color: #f4a261; }
+    .bi-intro-text .section-title { color: #fff; }
+    .bi-intro-text .section-sub { color: rgba(255,255,255,0.65); max-width: 100%; }
+
+    .bi-checklist {
+      margin-top: 2rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .bi-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .bi-checklist li::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--coral);
+      flex-shrink: 0;
+    }
+
+    /* spots */
+    .bi-spots {
+      background: #111;
+      padding: 6rem 2rem;
+    }
+
+    .bi-spots-inner { max-width: 1100px; margin: 0 auto; }
+
+    .bi-spots-header { margin-bottom: 3rem; }
+    .bi-spots-header .section-label { color: #f4a261; }
+    .bi-spots-header .section-title { color: #fff; }
+    .bi-spots-header .section-sub { color: rgba(255,255,255,0.6); }
+
+    .bi-spots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .bi-spot {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #1a1a1a;
+      transition: transform 0.35s, box-shadow 0.35s;
+    }
+
+    .bi-spot:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+
+    .bi-spot img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .bi-spot:hover img { transform: scale(1.07); }
+
+    .bi-spot-body { padding: 1.5rem; }
+
+    .bi-spot-badge {
+      display: inline-block;
+      background: rgba(231,111,81,0.2);
+      color: var(--coral);
+      border: 1px solid var(--coral);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.7rem;
+      border-radius: 10px;
+      margin-bottom: 0.7rem;
+    }
+
+    .bi-spot h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .bi-spot p { color: rgba(255,255,255,0.6); font-size: 0.87rem; line-height: 1.65; }
+
+    /* bi activities */
+    .bi-activities {
+      background: #0d0d0d;
+      padding: 6rem 2rem;
+    }
+
+    .bi-activities-inner { max-width: 1100px; margin: 0 auto; }
+
+    .bi-activities-header { margin-bottom: 3rem; }
+    .bi-activities-header .section-label { color: #f4a261; }
+    .bi-activities-header .section-title { color: #fff; }
+
+    .bi-act-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .bi-act {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.5rem;
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .bi-act:hover { background: #222; }
+
+    .bi-act img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .bi-act-info .bi-act-tag {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 0.35rem;
+    }
+
+    .bi-act-info h4 { color: #fff; font-size: 1rem; margin-bottom: 0.4rem; }
+    .bi-act-info p { color: rgba(255,255,255,0.55); font-size: 0.83rem; line-height: 1.6; }
+
+    /* bi gallery */
+    .bi-gallery {
+      background: #111;
+      padding: 6rem 2rem;
+    }
+
+    .bi-gallery-inner { max-width: 1100px; margin: 0 auto; }
+
+    .bi-gallery-header { text-align: center; margin-bottom: 3rem; }
+    .bi-gallery-header .section-label { color: #f4a261; }
+    .bi-gallery-header .section-title { color: #fff; }
+
+    .bi-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 220px 220px;
+      gap: 1rem;
+    }
+
+    .bi-gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bi-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .bi-gallery-item:hover img { transform: scale(1.1); }
+
+    .bi-gallery-item .bi-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+      color: #fff;
+      font-size: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .bi-gallery-item:hover .bi-overlay { opacity: 1; }
+
+    .bi-gallery-item.span2 { grid-column: span 2; }
+    .bi-gallery-item.span2v { grid-row: span 2; }
+
+    /* bi tips */
+    .bi-tips {
+      background: #0d0d0d;
+      padding: 6rem 2rem;
+    }
+
+    .bi-tips-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .bi-tips-header { margin-bottom: 3rem; }
+    .bi-tips-header .section-label { color: #f4a261; }
+    .bi-tips-header .section-title { color: #fff; }
+
+    .bi-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .bi-tip {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 2rem 1.8rem;
+      border-top: 3px solid var(--coral);
+    }
+
+    .bi-tip-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .bi-tip h4 { color: #fff; font-size: 1rem; margin-bottom: 0.6rem; }
+    .bi-tip p { color: rgba(255,255,255,0.6); font-size: 0.87rem; line-height: 1.7; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
@@ -408,6 +717,15 @@
       .islands-grid { grid-template-columns: 1fr 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .activity-list { grid-template-columns: 1fr 1fr; }
+
+      .bi-hero { padding: 3rem 2rem; }
+      .bi-overview-inner { grid-template-columns: 1fr 1fr; }
+      .bi-intro-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .bi-spots-grid { grid-template-columns: 1fr 1fr; }
+      .bi-act-grid { grid-template-columns: 1fr; }
+      .bi-gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .bi-gallery-item.span2, .bi-gallery-item.span2v { grid-column: span 1; grid-row: span 1; }
+      .bi-tips-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 580px) {
@@ -416,6 +734,13 @@
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .activity-list { grid-template-columns: 1fr; }
       .cards { grid-template-columns: 1fr; }
+
+      .bi-overview-inner { grid-template-columns: 1fr 1fr; }
+      .bi-spots-grid { grid-template-columns: 1fr; }
+      .bi-act { grid-template-columns: 1fr; }
+      .bi-act img { width: 100%; height: 160px; }
+      .bi-gallery-grid { grid-template-columns: 1fr; }
+      .bi-tips-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -427,6 +752,7 @@
     <div class="nav-links">
       <a href="#highlights">소개</a>
       <a href="#islands">섬 탐험</a>
+      <a href="#big-island">빅 아일랜드</a>
       <a href="#activities">액티비티</a>
       <a href="#cta">여행 시작</a>
     </div>
@@ -541,16 +867,276 @@
           </div>
         </div>
         <div class="island-card">
-          <img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80" alt="빅아일랜드" />
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="빅아일랜드" />
           <div class="island-info">
             <span class="island-tag">Big Island</span>
             <h3>빅 아일랜드</h3>
-            <p>킬라우에아 화산과 검은 모래 해변. 지구의 경이를 만나다.</p>
+            <p>활화산·검은 모래 해변·만타레이 야간 다이빙·마우나케아 별빛. 지구의 모든 기후가 공존하는 섬.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- BIG ISLAND -->
+  <div id="big-island" class="big-island">
+
+    <!-- BI Hero -->
+    <div class="bi-hero">
+      <span class="bi-hero-kicker">Big Island · 하와이 섬</span>
+      <h2>지구의 탄생을<br>목격하다</h2>
+      <p>하와이 군도에서 가장 크고, 가장 젊은 섬. 활화산이 지금 이 순간에도 새로운 땅을 만들어내는 빅 아일랜드는 단 하나의 섬 안에 11가지 기후대가 공존하는 경이로운 장소입니다.</p>
+    </div>
+
+    <!-- BI 통계 -->
+    <div class="bi-overview">
+      <div class="bi-overview-inner">
+        <div class="bi-stat-item">
+          <h3>10,432㎢</h3>
+          <p>하와이 전체 면적의 63%</p>
+        </div>
+        <div class="bi-stat-item">
+          <h3>4,207m</h3>
+          <p>마우나케아 정상 해발고도</p>
+        </div>
+        <div class="bi-stat-item">
+          <h3>11가지</h3>
+          <p>섬 내 공존하는 기후대</p>
+        </div>
+        <div class="bi-stat-item">
+          <h3>30만+</h3>
+          <p>연간 화산 국립공원 방문객</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BI 소개 -->
+    <div class="bi-intro">
+      <div class="bi-intro-inner">
+        <img class="bi-intro-img" src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=900&q=80" alt="빅 아일랜드 화산" />
+        <div class="bi-intro-text">
+          <span class="section-label">About Big Island</span>
+          <h2 class="section-title">하와이에서 가장<br>다이나믹한 섬</h2>
+          <p class="section-sub">빅 아일랜드는 나머지 하와이 섬을 모두 합친 것보다 넓습니다. 서쪽엔 리조트와 황금빛 해변, 동쪽엔 울창한 열대우림과 폭포, 남쪽엔 활화산과 용암 지대, 북쪽엔 목장과 협곡이 펼쳐집니다. 단 한 번의 여행으로 지구의 모든 얼굴을 만날 수 있는 곳입니다.</p>
+          <ul class="bi-checklist">
+            <li>세계 유일의 활화산 국립공원 (UNESCO 세계유산)</li>
+            <li>마우나케아 — 해수면 기준 세계에서 가장 높은 산</li>
+            <li>카할루우 해변에서 하와이 그린 거북 스노클링</li>
+            <li>만타레이 야간 다이빙 — 세계 10대 다이빙 스팟</li>
+            <li>코나 커피 농장 투어 — 세계 최고급 커피 산지</li>
+            <li>와이피오 계곡 — 고대 하와이 왕족의 계곡</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BI 주요 명소 -->
+    <div class="bi-spots">
+      <div class="bi-spots-inner">
+        <div class="bi-spots-header">
+          <span class="section-label">Must-Visit Spots</span>
+          <h2 class="section-title">반드시 가야 할 6곳</h2>
+          <p class="section-sub">빅 아일랜드에서 놓치면 후회할 핵심 명소들을 소개합니다.</p>
+        </div>
+        <div class="bi-spots-grid">
+
+          <div class="bi-spot">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="킬라우에아" />
+            <div class="bi-spot-body">
+              <span class="bi-spot-badge">Volcano</span>
+              <h3>킬라우에아 화산</h3>
+              <p>지구상에서 가장 오랫동안 활동 중인 화산. 하와이 화산 국립공원 안에 있으며, 야간에는 용암빛이 하늘을 붉게 물들이는 장관을 볼 수 있습니다. UNESCO 세계유산으로 등재된 필수 방문지입니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-spot">
+            <img src="https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?w=600&q=80" alt="마우나케아" />
+            <div class="bi-spot-body">
+              <span class="bi-spot-badge">Observatory</span>
+              <h3>마우나케아 정상</h3>
+              <p>해발 4,207m. 해수면에서 측정하면 에베레스트보다 높은 세계 최고봉. 정상에는 세계 최고 수준의 천문대가 있으며, 구름 위에서 바라보는 별하늘은 평생 잊을 수 없는 경험입니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-spot">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="푸날루우 블랙샌드비치" />
+            <div class="bi-spot-body">
+              <span class="bi-spot-badge">Beach</span>
+              <h3>푸날루우 검은 모래 해변</h3>
+              <p>화산 용암이 바닷물에 식으면서 만들어진 새까만 모래 해변. 하와이 그린 바다거북(호누)이 자주 올라와 햇볕을 쬐는 모습을 볼 수 있어 스노클러와 사진가들에게 최고의 명소입니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-spot">
+            <img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80" alt="만타레이 다이빙" />
+            <div class="bi-spot-body">
+              <span class="bi-spot-badge">Diving</span>
+              <h3>만타레이 야간 다이빙</h3>
+              <p>코나 앞바다에서 즐기는 세계 10대 다이빙 스팟. 밤이 되면 플랑크톤을 먹으러 수십 마리의 만타레이가 몰려듭니다. 수중 라이트 아래 춤추는 만타레이의 우아한 자태는 잊을 수 없는 장면입니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-spot">
+            <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80" alt="와이피오 계곡" />
+            <div class="bi-spot-body">
+              <span class="bi-spot-badge">Valley</span>
+              <h3>와이피오 계곡</h3>
+              <p>하와이 원주민 왕족들이 살았던 신성한 계곡. 검은 모래 해변, 폭포, 타로 농장이 어우러진 비밀의 낙원. 경사 25%의 가파른 도로를 통해서만 접근 가능해 신비로움이 더합니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-spot">
+            <img src="https://images.unsplash.com/photo-1567416661576-659f29aacec4?w=600&q=80" alt="코나 커피 농장" />
+            <div class="bi-spot-body">
+              <span class="bi-spot-badge">Culture</span>
+              <h3>코나 커피 농장</h3>
+              <p>세계 3대 커피 산지로 꼽히는 코나 지역. 화산 토양과 독특한 기후가 만들어내는 코나 커피는 향과 맛이 탁월합니다. 농장 투어에서 직접 수확·로스팅 체험을 즐겨보세요.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BI 액티비티 -->
+    <div class="bi-activities">
+      <div class="bi-activities-inner">
+        <div class="bi-activities-header">
+          <span class="section-label">Big Island Activities</span>
+          <h2 class="section-title">빅 아일랜드에서만<br>할 수 있는 것들</h2>
+        </div>
+        <div class="bi-act-grid">
+
+          <div class="bi-act">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=300&q=80" alt="용암 보트 투어" />
+            <div class="bi-act-info">
+              <div class="bi-act-tag">Volcano Tour</div>
+              <h4>용암 보트 투어</h4>
+              <p>바다로 흘러드는 용암을 보트를 타고 가까이서 관찰합니다. 1,100℃의 용암이 바닷물과 만나 거대한 수증기 기둥을 이루는 순간은 살면서 한 번뿐인 경험입니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-act">
+            <img src="https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?w=300&q=80" alt="마우나케아 별보기" />
+            <div class="bi-act-info">
+              <div class="bi-act-tag">Stargazing</div>
+              <h4>마우나케아 별빛 투어</h4>
+              <p>구름 위 4,000m 고지. 빛 공해가 없는 하늘에서 은하수를 맨눈으로 바라봅니다. 전문 천문대 망원경으로 행성과 성운을 직접 관측하는 투어도 운영됩니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-act">
+            <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=300&q=80" alt="용암 동굴 탐험" />
+            <div class="bi-act-info">
+              <div class="bi-act-tag">Caving</div>
+              <h4>용암 동굴 (라바 튜브) 탐험</h4>
+              <p>수천 년 전 용암이 흘러 만들어진 거대한 지하 터널을 탐험합니다. 카우모아나 라바 튜브는 전 세계에서 가장 긴 용암 동굴 중 하나로, 신비로운 지하 세계를 체험할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-act">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&q=80" alt="돌고래 수영" />
+            <div class="bi-act-info">
+              <div class="bi-act-tag">Marine Life</div>
+              <h4>야생 돌고래와 수영</h4>
+              <p>케알라케콰 만의 투명한 바다에서 야생 스피너 돌핀 무리와 함께 수영합니다. 스노클링 장비만 있으면 수십 마리의 돌고래가 바로 코앞에서 공중제비를 돌며 인사를 건넵니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-act">
+            <img src="https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?w=300&q=80" alt="폭포 하이킹" />
+            <div class="bi-act-info">
+              <div class="bi-act-tag">Hiking</div>
+              <h4>아카카 폭포 하이킹</h4>
+              <p>낙차 135m의 장엄한 아카카 폭포까지 열대우림을 가로지르는 왕복 2km의 하이킹 코스. 대나무 숲, 야생 난초, 히비스커스 꽃이 이어지는 길은 그 자체로 하나의 작품입니다.</p>
+            </div>
+          </div>
+
+          <div class="bi-act">
+            <img src="https://images.unsplash.com/photo-1542259009477-d625272157b7?w=300&q=80" alt="쿠알로아 승마" />
+            <div class="bi-act-info">
+              <div class="bi-act-tag">Ranch</div>
+              <h4>파커 목장 승마 투어</h4>
+              <p>미국에서 손꼽히는 규모를 자랑하는 파커 목장. 말을 타고 코할라 산 기슭의 광활한 초원을 가로지르며 코우키 해안선까지 이어지는 승마 코스를 체험해 보세요.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BI 갤러리 -->
+    <div class="bi-gallery">
+      <div class="bi-gallery-inner">
+        <div class="bi-gallery-header">
+          <span class="section-label">Big Island Gallery</span>
+          <h2 class="section-title">빅 아일랜드의 표정들</h2>
+        </div>
+        <div class="bi-gallery-grid">
+          <div class="bi-gallery-item span2v">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="킬라우에아" />
+            <div class="bi-overlay">킬라우에아 칼데라</div>
+          </div>
+          <div class="bi-gallery-item span2">
+            <img src="https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?w=800&q=80" alt="마우나케아" />
+            <div class="bi-overlay">마우나케아 정상의 일출</div>
+          </div>
+          <div class="bi-gallery-item">
+            <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=400&q=80" alt="용암" />
+            <div class="bi-overlay">흘러내리는 용암</div>
+          </div>
+          <div class="bi-gallery-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="검은 모래 해변" />
+            <div class="bi-overlay">푸날루우 검은 모래 해변</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BI 여행 팁 -->
+    <div class="bi-tips">
+      <div class="bi-tips-inner">
+        <div class="bi-tips-header">
+          <span class="section-label">Travel Tips</span>
+          <h2 class="section-title">빅 아일랜드 여행 전<br>꼭 알아야 할 것들</h2>
+        </div>
+        <div class="bi-tips-grid">
+          <div class="bi-tip">
+            <div class="bi-tip-icon">🚗</div>
+            <h4>렌터카는 필수</h4>
+            <p>빅 아일랜드는 대중교통이 매우 제한적입니다. 명소 간 거리가 멀기 때문에 렌터카 없이는 섬의 매력을 절반도 느끼기 어렵습니다. 4WD 차량을 권장합니다.</p>
+          </div>
+          <div class="bi-tip">
+            <div class="bi-tip-icon">🧥</div>
+            <h4>기후 준비는 철저하게</h4>
+            <p>코나 해변은 30℃의 여름이지만, 마우나케아 정상은 영하로 내려갑니다. 반팔부터 패딩까지 다양한 옷을 챙겨야 합니다. 하루에 두 계절을 경험하는 섬이니까요.</p>
+          </div>
+          <div class="bi-tip">
+            <div class="bi-tip-icon">🌋</div>
+            <h4>화산 공원은 이른 아침에</h4>
+            <p>해가 지면 용암빛이 더 선명하게 보이지만, 이른 아침 안개가 낀 칼데라도 신비롭습니다. 국립공원 입장료($30/차량)를 내면 7일 간 재입장 가능합니다.</p>
+          </div>
+          <div class="bi-tip">
+            <div class="bi-tip-icon">🐢</div>
+            <h4>호누(거북)와의 거리 유지</h4>
+            <p>하와이 그린 거북은 보호종입니다. 법적으로 6피트(약 1.8m) 이내로 접근하면 벌금이 부과됩니다. 멀리서 관찰하고 사진만 찍는 것이 올바른 여행 방법입니다.</p>
+          </div>
+          <div class="bi-tip">
+            <div class="bi-tip-icon">⭐</div>
+            <h4>마우나케아 예약은 필수</h4>
+            <p>마우나케아 정상 방문은 기상 조건에 따라 통제될 수 있습니다. 방문자 센터(해발 2,800m)에서 고산 적응 시간을 갖고, 야간 천문대 투어는 사전 예약을 권장합니다.</p>
+          </div>
+          <div class="bi-tip">
+            <div class="bi-tip-icon">☕</div>
+            <h4>코나 커피는 현지에서</h4>
+            <p>코나 지역에는 크고 작은 커피 농장이 100개 이상 있습니다. '코나 블렌드'와 '100% 코나 커피'는 전혀 다른 제품입니다. 농장에서 직접 구매하면 가장 신선한 커피를 합리적인 가격에 즐길 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /BIG ISLAND -->
 
   <!-- STATS -->
   <section class="stats">
